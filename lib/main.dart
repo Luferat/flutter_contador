@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MaterialApp(
+  runApp(MaterialApp(
       title: "Contador de Gente",
       // Cria uma coluna na home
       // O conteúdo da coluna é centralizado horizontalmente
@@ -11,7 +11,7 @@ void main() {
         // Widgets da coluna
         children: [
           // Primeira linha: um texto
-          Text(
+          const Text(
             "Pessoas: 0",
             style: TextStyle(
               color: Colors.blue,
@@ -19,8 +19,33 @@ void main() {
               // backgroundColor: Colors.yellow,
             ),
           ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              TextButton(
+                onPressed: () {},
+                child: const Text(
+                  "+1",
+                  style: TextStyle(
+                    fontSize: 40,
+                    color: Colors.blue,
+                  ),
+                ),
+              ),
+              TextButton(
+                onPressed: () {},
+                child: const Text(
+                  "-1",
+                  style: TextStyle(
+                    fontSize: 40,
+                    color: Colors.blue,
+                  ),
+                ),
+              ),
+            ],
+          ),
           // Segunda linha: outro texto
-          Text(
+          const Text(
             "Pode entrar",
             style: TextStyle(
               color: Colors.blue,
